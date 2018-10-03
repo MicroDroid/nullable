@@ -1,0 +1,68 @@
+{
+	"name": "nullable",
+	"version": "0.1.0",
+	"description": "One more SQL database manager. A cute one.",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"app:dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --watch",
+		"app:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+		"app:clean": "rm -f ./public/css/app-*.css ./public/js/app-*.js ./public/fonts/*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MicroDroid/null.git"
+	},
+	"keywords": [
+		"null",
+		"nullable",
+		"sql",
+		"browser",
+		"manager",
+		"sequel",
+		"database",
+		"schema"
+	],
+	"author": "Yousef Sultan <yousef.su.2000@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MicroDroid/nullable/issues"
+	},
+	"homepage": "https://github.com/MicroDroid/nullable#readme",
+	"dependencies": {
+		"@babel/core": "^7.1.0",
+		"@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+		"@babel/plugin-transform-runtime": "^7.1.0",
+		"@babel/preset-env": "^7.1.0",
+		"@babel/runtime": "^7.0.0",
+		"babel-loader": "^8.0.2",
+		"bulma": "^0.7.1",
+		"css-loader": "^1.0.0",
+		"electron": "^3.0.2",
+		"eslint": "^5.6.0",
+		"eslint-plugin-vue": "^4.7.1",
+		"file-loader": "^2.0.0",
+		"koa-static": "^5.0.0",
+		"lodash.debounce": "^4.0.8",
+		"mini-css-extract-plugin": "^0.4.3",
+		"mysql2": "^1.6.1",
+		"node-sass": "^4.9.3",
+		"optimize-css-assets-webpack-plugin": "^5.0.1",
+		"pg": "^7.4.3",
+		"pg-hstore": "^2.3.2",
+		"pg-native": "^3.0.0",
+		"sass-loader": "^7.1.0",
+		"sequelize": "^4.39.0",
+		"tedious": "^2.6.4",
+		"terser-webpack-plugin": "^1.1.0",
+		"uniqid": "^5.0.3",
+		"vue": "^2.5.17",
+		"vue-devtools": "^5.0.0-beta.1",
+		"vue-loader": "^15.4.2",
+		"vue-template-compiler": "^2.5.17",
+		"vuex": "^3.0.1",
+		"vuex-persist": "^1.6.1",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.1"
+	}
+}
