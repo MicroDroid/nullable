@@ -75,14 +75,15 @@ module.exports = {
 		}),
 	],
 
+	// Somehow sequelize cries if I minify the files
 	...isProd ? {
 		optimization: {
 			minimizer: [
-				new TerserWebpackPlugin({
-					cache: true,
-					parallel: true,
-					sourceMap: false,
-				}),
+				// new TerserWebpackPlugin({
+				// 	cache: true,
+				// 	parallel: true,
+				// 	sourceMap: false,
+				// }),
 				new OptimizeCssAssetsPlugin(),
 			]
 		}

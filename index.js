@@ -10,8 +10,7 @@ function createWindow() {
 
 	mainWindow.loadFile('./build/index.html');
 
-	// Open the DevTools.
-	mainWindow.webContents.openDevTools();
+	// mainWindow.webContents.openDevTools();
 
 	mainWindow.on('closed', function () {
 		mainWindow = null;
@@ -19,8 +18,7 @@ function createWindow() {
 }
 
 app.on('ready', () => {
-	if (process.env.NODE_ENV !== 'production')
-		require('vue-devtools').install();
+	// require('vue-devtools').install();
 
 	createWindow();
 });

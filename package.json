@@ -5,9 +5,37 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "electron .",
+		"pack": "build --dir",
+		"dist": "build",
 		"app:dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --watch",
 		"app:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules",
 		"app:clean": "rm -f ./public/css/app-*.css ./public/js/app-*.js ./public/fonts/*"
+	},
+	"build": {
+		"appId": "nullable",
+		"linux": {
+			"category": "Development",
+			"target": [
+				"pacman",
+				"deb",
+				"tar.gz"
+			],
+			"executableName": "nullable",
+			"synopsis": "Minimalistic SQL database manager"
+		},
+		"pacman": {
+			"depends": [],
+			"compression": "xz"
+		},
+		"win": {
+			"target": "NSIS"
+		},
+		"files": [
+			"index.js",
+			"LICENSE.md",
+			"build",
+			"node_modules"
+		]
 	},
 	"repository": {
 		"type": "git",
@@ -29,7 +57,8 @@
 		"url": "https://github.com/MicroDroid/nullable/issues"
 	},
 	"homepage": "https://github.com/MicroDroid/nullable#readme",
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
 		"@babel/core": "^7.1.0",
 		"@babel/plugin-syntax-object-rest-spread": "^7.0.0",
 		"@babel/plugin-transform-runtime": "^7.1.0",
@@ -39,6 +68,7 @@
 		"bulma": "^0.7.1",
 		"css-loader": "^1.0.0",
 		"electron": "^3.0.2",
+		"electron-builder": "^20.28.4",
 		"eslint": "^5.6.0",
 		"eslint-plugin-vue": "^4.7.1",
 		"file-loader": "^2.0.0",
