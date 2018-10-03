@@ -3,6 +3,9 @@ import Vuex from 'vuex';
 import App from './components/App';
 import store from './store';
 import 'mysql2';
+import 'tedious';
+import 'pg';
+import 'pg-hstore';
 
 global.sequelizes = {};
 
